@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/memoryGame.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <button class="buttonNweGame">משחק חדש</button>
+      <div class="game">
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+        <div class="null">
+          <img src="" alt="imgs" / width="115px" height="115px" style="display:
+          none;" >
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    let arr = [
+      "/img/bee-8709123_1280.jpg",
+      "/img/crocus-8586117_1280.jpg",
+      "/img/fish-8265114_1280.jpg",
+      "/img/leaves-7597975_1280.jpg",
+      "/img/orange-parrots-8608540_1280.jpg",
+      "/img/rose-7698947_1280.jpg",
+      "/img/sun-1758348_1280.jpg",
+      "/img/swan-8242931_1280.jpg",
+    ];
+    function f2() {
+      for (let i = 0; i < 16; i++) {
+        game.children[i].className = "null";
+        game.children[i].children[0].style.display = "none";
+        count = 0;
+      }
+
+      for (let i = 0; i < 8; i++) {
+        let counter = 0;
+        while (counter < 2) {
+          let num = Math.floor(Math.random() * 16);
+          if (game.children[num].className == "null") {
+            game.children[num].children[0].setAttribute("src", arr[i]);
+            game.children[num].className = `${i}`;
+            counter++;
+          }
+        }
+      }
+    }
+    let temp="";
+    let count = 0;
+    function f1(event) {
+      let v = event.target;
+      if (v.className == "game") {
+        return;
+      }
+      if (count % 2 == 0) {
+        temp = v.className;
+        console.log(temp);
+       
+ v.children[0].style.display = "block";
+
+ setTimeout(function() {
+    v.children[0].style.display = "none";
+  }, 2000);
+}
+
+
+
+
+
+        count++;
+      } else {
+        v.children[0].style.display = "block";
+
+
+
+         if (temp == v.className) {
+    
+
+        }
+
+        count++;
+      }
+    }
+
+    const buttonNweGame = document.querySelector(".buttonNweGame");
+    buttonNweGame.addEventListener("click", f2);
+
+    const game = document.querySelector(".game");
+    game.addEventListener("click", f1);
+  </script>
+</html>

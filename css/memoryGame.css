@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+  }
+  .game div {
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    background: rgb(89, 47, 217);
+    border: 2.5px red solid;
+    opacity: 50%;
+    margin: 10px;
+  }
+  .game div:hover {
+    border: 2px black solid;
+  }
+  .game {
+    width: 575px;
+    margin: 0 auto;
+    outline: 1px solid;
+  }
+  
+  
