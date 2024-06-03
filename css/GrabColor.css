@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.box {
+  width: 300px;
+  height: 300px;
+  opacity: 40%;
+}
+.boxSofter{
+    width: 300px;
+    height: 300px;
+    opacity: 100%;
+}
+#a {
+  background-color: rgb(240, 90, 97);
+}
+#b {
+  background-color: rgb(109, 241, 97);
+}
+#c {
+  background-color: rgb(62, 50, 230);
+}
+#d {
+  background-color: rgb(237, 247, 104);
+}
+.game div:hover {
+  opacity: 100%;
+}
+.h1 {
+    display: flex;
+    justify-content: center;
+ 
+}
+.game {
+  width: 600px;
+  margin: 0 auto;
+  outline: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}

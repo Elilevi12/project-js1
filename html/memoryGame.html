@@ -178,6 +178,7 @@
           game.children[i].className = "null";
           game.children[i].children[0].style.display = "none";
           count = 0;
+          counterClick=0;
         }
 
         for (let i = 0; i < 8; i++) {
@@ -194,12 +195,11 @@
       }
 let counterClick=0;
       let count = 0;
-      function f1(event) {
-      
+      function f1(event) {//פונקצייה לניהול המשחק      
         if(counterClick==2){
           return
         }
-        //פונקציה לניהול המשחק
+        
 
         let v = event.target;
         if (v.className == "game" || v.tagName == "IMG"||v.className==buttonNweGame) {
