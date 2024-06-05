@@ -28,6 +28,7 @@ function f3(event) {
   if (e.className == "game" || !plyhr) {
     return;
   }
+  document.querySelector(".counterUser").textContent = counterClick;
 
   if (Number(e.dataset.name) != arrSoftware[counterClick]) {
     p_loss.textContent = "הפסדת";
@@ -87,7 +88,7 @@ function f6(num) {
 // }
 let numOfcounterSoftware = counterClick + 1;
 document.querySelector(".counterSoftware").textContent = numOfcounterSoftware;
-document.querySelector(".counterUser").textContent = counterClick;
+
 const p_loss = document.querySelector(".loss");
 const button = document.querySelector("button");
 button.addEventListener("click", f2);
