@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 900px;
+  height: 900px;
+  margin: 0 auto;
+  outline: 1px solid;
+}
+.red {
+  background-color: red;
+ 
+}
+#red {
+  border: 4px solid red;
+}
+.blue{
+background-color: blue;
+}
+#blue{
+border: 4px solid blue;
+}
+.yellow{background-color: yellow;}
+#yellow{
+    border: 4px solid   yellow;
+}
+.green{background-color: green;}
+#green{
+border: 4px solid green;
+}
+.black{
+    background-color: black;
+}
+#black{
+    border: 4px solid black;
+}
+#purple{
+    border: 6px solid purple;
+}
+.purple{
+    background-color: purple;
+}
+#white{
+    border: 6px solid white;
+}
+.white{
+    background-color: white;
+}
+.gray{
+    background-color: gray;
+}
+#gray{
+    border: 6px solid gray;
+}
+.brown{
+    background-color: brown;
+}
+#brown{
+border: 6px solid brown;
+}
+.red,
+.blue,
+.yellow,
+.green,
+.brown,
+.black,
+.white,
+.purple,
+.gray {
+  width: 1fr;
+  height: 1fr;
+}

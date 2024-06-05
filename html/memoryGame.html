@@ -171,6 +171,7 @@
       ];
       let temp1;
       let temp; 
+      
       function f2() {
         //פונקצייה להתחלת משחק
         
@@ -193,10 +194,11 @@
           }
         }
       }
+      
 let counterClick=0;
       let count = 0;
       function f1(event) {//פונקצייה לניהול המשחק      
-        if(counterClick==2){
+        if(counterClick>1){
           return
         }
         
@@ -234,7 +236,6 @@ let counterClick=0;
 
       const buttonNweGame = document.querySelector(".buttonNweGame");
       buttonNweGame.addEventListener("click", f2);
-
       const game = document.querySelector(".game");
       game.addEventListener("click", f1);
     </script>
