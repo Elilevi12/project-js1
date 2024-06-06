@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 .game div {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   display: inline-block;
   background: rgb(126, 96, 218);
   border: 2.5px red solid;
@@ -13,7 +15,75 @@
   border: 2px black solid;
 }
 .game {
-  width: 575px;
+  width: 900px;
   margin: 0 auto;
   outline: 1px solid;
+}
+footer {
+  background: linear-gradient(90deg, #42271d, #42271d);
+  color: #efbebe;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: auto; /* הוספה כדי שה-footer יישב בתחתית */
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer img {
+  width: 60px;
+  height: auto;
+  margin-top: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+footer ul ul {
+  margin: 0 0 10px;
+}
+div img {
+  height: 115px;
+  width: 115px;
+}
+@media (max-width: 950px) {
+  .game div {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background: rgb(126, 96, 218);
+    border: 2.5px red solid;
+    margin: 5px;
+  }
+  .linkcNav {
+    flex-direction: column;
+    align-items: center;
+  }
+  div img {
+    height: 95px;
+    width: 95px;
+  }
+  main p {
+    font-size: 1em;
+  }
+  footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .game {
+    width: 457px;
+    margin: 0 auto;
+    outline: 1px solid;
+  }
 }

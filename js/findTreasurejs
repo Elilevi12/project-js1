@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="kipnis3.css">
-</head>
-<body>
-    <div class="p">
-        <p class="pp" style="display: none">מצאת את המטמון</p>
-      </div>
-      <div class="button">
-        <button>משחק חדש</button>
-      </div>
-    <div class="game">
-        <div ></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <p class="pcount">5</p>
-</body>
-<script>
+
+console.log(specialCharacters);
+
+
 let rnd=Math.floor(Math.random()*9);
 const game=document.querySelector(".game")
 game.children[rnd].className="rnd"
@@ -59,7 +34,3 @@ if(e.target.className=="rnd"){
 }
 }
 game.addEventListener("click",f1)
-
-
-</script>
-</html>

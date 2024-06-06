@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/loginPage.css" />
   </head>
   <body>
     <div class="contenter">
       <header>
-        <img src="/img/logo.png" alt="">
+        <img src="/img/logo.png" alt="" />
         <h1 dir="rtl">ברוכים הבאים למשחקידס</h1>
         <p dir="rtl">אתר המשחקים שלי</p>
       </header>
@@ -27,7 +28,7 @@
               type="password"
               id="myPasswrd"
               placeholder="הכנס סיסמה"
-              minlength="3"
+              minlength="6"
               required
             />
             <p>אין לך חשבון? <a href="" id="signup_mode">התחבר</a></p>
@@ -46,8 +47,8 @@
             <input
               type="password"
               id="myPasswrdOfNewUser"
-              placeholder="הכנס סיסמה"
-              minlength="3"
+              placeholder="סיסמה"
+              minlength="6"
               required
             />
             <input
@@ -74,6 +75,5 @@
       </footer>
     </div>
     <script src="../js/loginPage.js"></script>
-    <!-- <a href="/html/loginPage.html"></a> -->
   </body>
 </html>

@@ -1,16 +1,20 @@
-body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  line-height: 1.6;
-  margin: 0;
+* {
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  line-height: 1.6;
   background-color: #f0f8ff;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* שינוי לגובה מינימלי */
 }
 
 header {
-  background: linear-gradient(90deg, #ff6347, #ff4500);
+  background: #ff4500;
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -18,7 +22,7 @@ header {
 }
 
 header img {
-  width: 120px;
+  width: 300px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -40,7 +44,7 @@ nav {
   border-radius: 20px;
   background-color: #42271d;
   font-size: 1.2em;
-  transition: background-color 0.3s;
+  transition: background-color 0.8s;
 }
 
 .linkcNav a:hover {
@@ -66,18 +70,191 @@ main p {
   background-color: #fffacd;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(254, 65, 65, 0.1);
 }
 
 footer {
-  background: linear-gradient(90deg, #42271d, #42271d);
+  background: #ff4500;
   color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: auto; /* שינוי כדי להבטיח שה-footer יהיה צמוד לתחתית */
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul {
+  margin: 5px 0;
+}
+
+footer img {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* התאמות לרזולוציה מתחת ל-800px */
+@media (max-width: 800px) {
+  .linkcNav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .linkcNav a {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  main h1 {
+    font-size: 2em;
+  }
+
+  main p {
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  footer div {
+    align-items: center;
+  }
+
+  footer img {
+    width: 80px;
+  }
+}
+
+
+
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #ff4500;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin: 10px 0;
+}
+
+.linkcNav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.linkcNav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: #42271d;
+  font-size: 1.2em;
+  transition: background-color 0.8s;
+}
+
+.linkcNav a:hover {
+  background-color: #773218;
+}
+
+main {
+  flex: 1;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+main h1 {
+  color: #42271d;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px #ffdab9;
+}
+
+main p {
+  color: #333;
+  font-size: 1.2em;
+  background-color: #fffacd;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(254, 65, 65, 0.1);
+}
+
+
+
+@media (max-width: 800px) {
+  
+
+  
+  .linkcNav {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  main p {
+    font-size: 1em;
+  }
+
+  footer div {
+    flex-direction: column;
+  }
+
+  footer {
+    padding: 5px 0;
+  }
+
+  header {
+    padding: 5px 0;
+  }
+
+  header img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}footer {
+  background: linear-gradient(90deg, #42271d, #42271d);
+  color: #efbebe;
   padding: 20px 0;
   text-align: center;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  margin-top: auto; 
 }
 
 footer div {
@@ -101,15 +278,4 @@ footer ul {
 
 footer ul ul {
   margin: 0 0 10px;
-}
-
-@media (max-width: 600px) {
-  .linkcNav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  main p {
-    font-size: 1em;
-  }
-}
+} */

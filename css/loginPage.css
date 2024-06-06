@@ -94,7 +94,22 @@ footer {
   margin-top: 20px;
   background-color: #503dbb;
 }
-img{
-    width: 300px;
-    height: 200px;
+img {
+  width: 300px;
+  height: 200px;
+}
+
+@media (max-width: 700px) {
+  body {
+    background-color: #f77979;
+  }
+  .contenter {
+    width: 280px; /* רוחב 400px */
+    height: 480px; /* גובה 700px */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto; /* מיקום מרכזי אופקי */
+  }
 }

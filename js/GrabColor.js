@@ -5,31 +5,31 @@ const b = document.querySelector("#b");
 const c = document.querySelector("#c");
 const d = document.querySelector("#d");
 let arrSoftware = [];
-function f1() {
+function pushArr() {
   //הכנסת איבר חדש למערך של המחשב
   let num = Math.floor(Math.random() * 4);
   arrSoftware.push(num);
 }
 
-function f2() {
+function reset() {
   //איפוס משחק
   counterClick = 0;
   arrSoftware = [];
   p_loss.textContent = "";
 
-  // setTimeout(() => f4(), index);
-  f4();
+  // setTimeout(() => computer(), index);
+  computer();
 }
 
 let counterClick = 0;
-function f3(event) {
+function user(event) {
   //מוסיף איבר למערך של המשתמש
   const e = event.target;
   if (e.className == "game" || !plyhr) {
     return;
   }
-  document.querySelector(".counterUser").textContent = counterClick;
-
+  document.querySelector(".yourTurn").textContent="תורך"
+  document.querySelector(".counterUser").textContent = arrSoftware.length;
   if (Number(e.dataset.name) != arrSoftware[counterClick]) {
     p_loss.textContent = "הפסדת";
     counterClick += 2;
@@ -40,57 +40,41 @@ function f3(event) {
   //   console.log(counterClick);
   if (counterClick == arrSoftware.length) {
     counterClick = 0;
-    f4();
+    computer();
   }
 }
 
 let plyhr;
-function f4() {
+function computer() {
+  document.querySelector(".yourTurn").textContent="תור המחשב"
   plyhr = false;
   //ניהול תור המחשב
-  f1();
+  pushArr();
 
   let index = 1000;
   for (const element of arrSoftware) {
-    setTimeout(() => f5(element), index);
+    setTimeout(() => lighting(element), index);
     index += 500;
-    setTimeout(() => f6(element), index);
+    setTimeout(() => turnOff(element), index);
     index += 500;
-    numOfcounterSoftware--;
   }
-
-  setTimeout(() => (plyhr = true), 1000 * arrSoftware.length);
+ 
+ 
+  setTimeout(() => (plyhr = true ), 1000 * arrSoftware.length);
 }
-function f5(num) {
+
+
+function lighting(num) {
   //מכבה בתור המחשב
   game.children[num].className = "boxSofter";
 }
-function f6(num) {
+function turnOff(num) {
   //מדליק בתור המחשב
   game.children[num].className = "box";
 }
 
-// function f8() {
-//   let index = 1000;
-//   for (let i = 0; i < 3; i++) {
-//     setTimeout(() => f5(0), index);
-//     setTimeout(() => f5(3), index);
-//     setTimeout(() => f6(1), index);
-//     setTimeout(() => f6(2), index);
-
-//     index += 500;
-//     setTimeout(() => f6(0), index);
-//     setTimeout(() => f6(3), index);
-//     setTimeout(() => f5(1), index);
-//     setTimeout(() => f5(2), index);
-//     index += 500;
-//   }
-// }
-let numOfcounterSoftware = counterClick + 1;
-document.querySelector(".counterSoftware").textContent = numOfcounterSoftware;
-
 const p_loss = document.querySelector(".loss");
 const button = document.querySelector("button");
-button.addEventListener("click", f2);
-game.addEventListener("click", f3);
-// game.addEventListener("mouseover", f9);
+button.addEventListener("click", reset);
+game.addEventListener("click", user);
+
