@@ -15,6 +15,7 @@
   border: 2px black solid;
 }
 .game {
+  background-color: #efbebe;
   width: 900px;
   margin: 0 auto;
   outline: 1px solid;
@@ -52,8 +53,8 @@ footer ul ul {
   margin: 0 0 10px;
 }
 div img {
-  height: 115px;
-  width: 115px;
+  height: 200px;
+  width: 200px;
 }
 @media (max-width: 950px) {
   .game div {
