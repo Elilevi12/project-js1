@@ -1,36 +1,49 @@
+"use strict";
+if (!localStorage.getItem("current")) {
+  window.location.href = "/index.html";
+}
 
-console.log(specialCharacters);
-
-
-let rnd=Math.floor(Math.random()*9);
-const game=document.querySelector(".game")
-game.children[rnd].className="rnd"
-const counter=document.querySelector(".counter")
-let count=5;
-const p=document.querySelector(".pp");
-const pcount=document.querySelector(".pcount");
-function f1(e){
-  if(e.target.className=="game"){
+const open = document.querySelector(".open");
+const instructions = document.querySelector(".instructions");
+const p_instructions = document.querySelector("p_instructions");
+const closed = document.querySelector(".closed");
+open.addEventListener("click", (event) => {
+  instructions.children[1].style.display = "block";
+  instructions.children[2].style.display = "block";
+});
+closed.addEventListener("click", (event) => {
+  instructions.children[1].style.display = "none";
+  instructions.children[2].style.display = "none";
+});
+let rnd = Math.floor(Math.random() * 9);
+const game = document.querySelector(".game");
+game.children[rnd].className = "rnd";
+const counter = document.querySelector(".counter");
+let count = 5;
+const p = document.querySelector(".pp");
+const pcount = document.querySelector(".pcount");
+function f1(event) {
+  if (event.target.className == "game") {
     return;
   }
   count--;
-  pcount.textContent=`${count}`
-  if(count==0&&e.target.className!="rnd"){
-  for(let i=0;i<9;i++){
-game.children[i].className = '';
-console.log(game.children);
-}
-    rnd=Math.floor(Math.random()*9);
-      game.children[rnd].className="rnd"
-  count=5;  
-  pcount.textContent=`${count}`
-return;
+  pcount.textContent = `${count}`;
+  if (count == 0 && e.target.className != "rnd") {
+    for (let i = 0; i < 9; i++) {
+      game.children[i].className = "";
+      console.log(game.children);
+    }
+    rnd = Math.floor(Math.random() * 9);
+    game.children[rnd].className = "rnd";
+    count = 5;
+    pcount.textContent = `${count}`;
+    return;
   }
-if(e.target.className=="rnd"){
-    e.target.className="wello"
-      p.style.display="block"
-}else{
-    e.target.className="Brown"
+  if (event.target.className == "rnd") {
+    event.target.className = "wello";
+    p.style.display = "block";
+  } else {
+    event.target.className = "Brown";
+  }
 }
-}
-game.addEventListener("click",f1)
+game.addEventListener("click", f1);

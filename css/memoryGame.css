@@ -3,12 +3,25 @@
   padding: 0;
   margin: 0;
 }
+body {
+  background-color: beige;
+
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgb(116, 44, 44);
+  color: aliceblue;
+  text-align: center;
+}
+
 .game div {
   width: 200px;
   height: 200px;
   display: inline-block;
   background: rgb(126, 96, 218);
-  border: 2.5px red solid;
+  border: 2.5px #efbebe solid;
+  border-radius: 20px;
   margin: 10px;
 }
 .game div:hover {
@@ -16,6 +29,7 @@
 }
 .game {
   background-color: #efbebe;
+  border-radius: 20px;
   width: 900px;
   margin: 0 auto;
   outline: 1px solid;
@@ -27,7 +41,8 @@ footer {
   text-align: center;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  margin-top: auto; /* הוספה כדי שה-footer יישב בתחתית */
+  margin-top: auto;
+  bottom: 0p;
 }
 
 footer div {
@@ -55,6 +70,7 @@ footer ul ul {
 div img {
   height: 200px;
   width: 200px;
+  border-radius: 20px;
 }
 @media (max-width: 950px) {
   .game div {
@@ -62,7 +78,7 @@ div img {
     height: 100px;
     display: inline-block;
     background: rgb(126, 96, 218);
-    border: 2.5px red solid;
+    border: 2.5px #efbebe solid;
     margin: 5px;
   }
   .linkcNav {
@@ -70,11 +86,15 @@ div img {
     align-items: center;
   }
   div img {
-    height: 95px;
-    width: 95px;
+    height: 97px;
+    width: 97px;
+    border-radius: 20px;
   }
   main p {
     font-size: 1em;
+  }
+  footer {
+    bottom: 0px;
   }
   footer div {
     display: flex;

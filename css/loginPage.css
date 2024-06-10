@@ -8,7 +8,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.message{
+  background-color: #999;
+  color: #fff;
+}
 .contenter {
   width: 400px; /* רוחב 400px */
   height: 700px; /* גובה 700px */

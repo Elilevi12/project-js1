@@ -1,4 +1,22 @@
+"use strict";
+if(!localStorage.getItem("current")){
+  window.location.href ="/index.html"
+   
+}
+const open = document.querySelector(".open");
+const instructions = document.querySelector(".instructions");
+const p_instructions = document.querySelector("p_instructions");
+const closed = document.querySelector(".closed");
+open.addEventListener("click", (event) => {
+  instructions.children[1].style.display = "block";
+  instructions.children[2].style.display = "block";
+});
+closed.addEventListener("click", (event) => {
+  instructions.children[1].style.display = "none";
+  instructions.children[2].style.display = "none";
+});
 // <!-- red blue yellow green brown black white purple gray -->
+
 const game = document.querySelector(".game");
 let arr = [
     "black",

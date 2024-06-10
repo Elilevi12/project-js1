@@ -3,11 +3,16 @@
   padding: 0;
   margin: 0;
 }
-header{
+body {
+  background-color: beige;
+  min-height: 100vh;
+}
+header {
   background-color: rgb(116, 44, 44);
   color: aliceblue;
+  text-align: center;
 }
-main{
+main {
   background-color: antiquewhite;
 }
 .box {
@@ -94,7 +99,6 @@ footer ul ul {
   margin: 0 0 10px;
 }
 
-
 @media (max-width: 800px) {
   .game {
     width: 400px;
@@ -106,12 +110,12 @@ footer ul ul {
   }
   .box {
     width: 200px;
-    height: 200px;;
+    height: 200px;
     opacity: 40%;
   }
   .boxSofter {
-    width: 200px;;
-    height: 200px;;
+    width: 200px;
+    height: 200px;
     opacity: 100%;
   }
   footer div {
@@ -132,4 +136,3 @@ footer ul ul {
     margin-bottom: 10px;
   }
 }
-

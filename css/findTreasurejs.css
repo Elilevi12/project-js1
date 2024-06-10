@@ -1,12 +1,18 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  text-align: center;
+  background-color: rgb(116, 44, 44);
+  color: aliceblue;
 }
 body {
   font-family: Arial, sans-serif;
   direction: rtl; /* כיוון הכתיבה מימין לשמאל */
   background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
 }
 
 .p {
@@ -84,10 +90,10 @@ p {
   font-size: 100px;
 }
 .game .wello {
-    background: rgb(203, 255, 14);
+  background: rgb(203, 255, 14);
 }
-.game .Brown{
-    background:rgb(104, 37, 37)
+.game .Brown {
+  background: rgb(104, 37, 37);
 }
 footer {
   background: linear-gradient(90deg, #42271d, #42271d);
@@ -96,7 +102,7 @@ footer {
   text-align: center;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 footer div {
