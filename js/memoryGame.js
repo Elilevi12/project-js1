@@ -55,7 +55,7 @@ let counterTempWinner = 0;
 let counterWinner = 0;
 let counterClick = 0;
 let counterGame = 0;
-function f1(event) {
+function gameManager(event) {
   //פונקצייה לניהול המשחק
   if (counterClick > 1) {
     return;
@@ -109,4 +109,4 @@ function f1(event) {
 const buttonNweGame = document.querySelector(".buttonNweGame");
 buttonNweGame.addEventListener("click", reset);
 const game = document.querySelector(".game");
-game.addEventListener("click", f1);
+game.addEventListener("click", gameManager);
